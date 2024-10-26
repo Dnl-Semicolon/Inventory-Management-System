@@ -1,4 +1,4 @@
 package com.inventory;
 
-public class Product {
+public interface Product {
 }
