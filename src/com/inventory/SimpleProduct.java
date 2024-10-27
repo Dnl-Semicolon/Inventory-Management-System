@@ -1,23 +1,51 @@
 package com.inventory;
 
+import java.text.SimpleDateFormat;
+
 public class SimpleProduct implements Product {
+
+	private int id;
+	private String name;
+	private int quantity;
+	private double price;
+	private static int simpleProductCount = 0;
+
+	public SimpleProduct(String name, int quantity, double price) {
+		this.name = name;
+		this.quantity = quantity;
+		this.price = price;
+
+		simpleProductCount++;
+		this.id = simpleProductCount;
+	}
+
 	@Override
 	public int getId() {
-		return 0;
+		return id;
 	}
 
 	@Override
 	public String getName() {
-		return "";
+		return name;
 	}
 
 	@Override
 	public int getQuantity() {
-		return 0;
+		return quantity;
 	}
 
 	@Override
 	public double getPrice() {
-		return 0;
+		return price;
+	}
+
+	@Override
+	public String toString() {
+		return "SimpleProduct{" +
+				"id=" + id +
+				", name='" + name + '\'' +
+				", quantity=" + quantity +
+				", price=" + price +
+				'}';
 	}
 }
