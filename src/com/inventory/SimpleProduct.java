@@ -1,7 +1,5 @@
 package com.inventory;
 
-import java.text.SimpleDateFormat;
-
 public class SimpleProduct implements Product {
 
 	private int id;
