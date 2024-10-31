@@ -1,4 +1,8 @@
 package com.inventory;
 
-public class Product {
+public interface Product {
+	int getId();
+	String getName();
+	int getQuantity();
+	double getPrice();
 }
